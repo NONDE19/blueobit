@@ -164,8 +164,8 @@ color: green;
   }
   
   form button {
-    background-color: #146400da;
-    color: rgb(12, 178, 255);
+    background-color: #33ff00da;
+    color: rgba(0, 0, 0, 1);
     border: none;
     cursor: pointer;
     font-size: 18px;
