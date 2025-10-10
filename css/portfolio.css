@@ -1,0 +1,123 @@
+
+.Section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .Section h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    
+.container, .grid{
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.portfolio .container{
+  width:100%;
+  max-width:1200px;
+  margin:0 outo;
+  padding:0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 4rem;
+  background-color: #00c3ff;
+  text-align: center;
+  padding: 60px 30px;
+  margin: 20px 0;
+  border-radius: 2px;
+  color: #000000;
+  transition: transform 0.2s ease-in-out;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  background-color:transparent;
+  text-align: center;
+  padding: 60px 30px;
+  margin: 20px 0;
+  border-radius: 2px;
+  color: #000000;
+  transition: transform 0.2s ease-in-out;
+}
+.Card  {
+   width: 100%;
+   max-width: 100%;
+   height: auto;
+   border-radius: 8px;
+   border: 4px solid #ffffff9f;
+}
+img{
+  width: 200px;
+   max-width: 200px;
+   height: 200px;
+   gap: 2px;
+}
+
+    
+    @media(max-width:768px){
+      .portfolio-grid{
+        grid-template-columns: 1fr;
+      }
+      .portfolio-item{
+        margin-bottom: 2rem;
+      }
+    }
+    .card {
+      background: rgb(255, 255, 255);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:1rem;
+  background-color: #017da3;
+  text-align: center;
+  padding: 60px 30px;
+  margin: 20px 0;
+  border-radius: 2px;
+  color: #ffffffbe;
+  transition: transform 0.2s ease-in-out;
+}
+
+.portfolio-grid img {
+   width: 300px;
+   max-width: 400px;
+   height: 300px;
+   padding-top: 0;
+   border-radius: 8px;
+   border: 4px solid #ffffff9f;
+}
+.portfolio-item p a{
+  color: #ffffff;
+}
+  .portfolio-item p a:hover{
+    color: chartreuse;
+  }
+
+img{
+  padding-top:6px;
+}
+
+.IT-portifolio{
+  display: grid;
+  grid-template-columns: 1fr 1fr  1fr;
+  margin-left: 50px;
+  margin-right: 60px;
+  gap: 12px;
+}
+.-solutions{
+  color: aliceblue;
+}
