@@ -9,10 +9,11 @@ html, body {
 }
 
 body {
-  flex-direction: column;
+ 
 }
 
 body{
+   flex-direction: column;
     font: 18px/1.5 Arial, Helvetica,sans-serif;
     padding:0;
     font-size:16px;
