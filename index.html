@@ -1,162 +1,611 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <meta name="description" content="Affordable and Proffesional Services @ Neztech">
-        <meta name="keywords" content="Nezetech's IT and Graphic design services">
-        <meta name=" author" content="Brad traversy">
-        <title>HOME NEZTECH SERVICES</title>
-        <link rel="stylesheet" href="./css/style.css">
-         <link rel="stylesheet" href="./css/Header.css">
-         <link rel="stylesheet" href="./css/general.css">
-         <link rel="stylesheet" href="./css/portfolio.css">
-         <link rel="stylesheet" href="./css/contact.css">
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NezTech - Professional ICT and Digital Solutions by Nonde Ezekiel. Web Development, Mobile Apps, Graphic Design, Networking, and Technical Support.">
+    <meta name="keywords" content="NezTech, Nonde Ezekiel, ICT, Web Development, Android Apps, Graphic Design, Zambia, Digital Solutions">
+    <meta name="author" content="Nonde Ezekiel">
+    <meta property="og:title" content="NezTech | Digital Solutions & ICT Services">
+    <meta property="og:description" content="Transforming Ideas into Digital Solutions. Professional ICT services for businesses and individuals.">
+    <meta property="og:type" content="website">
+    <title>NezTech | Nonde Ezekiel - Digital Solutions & ICT Services</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel=" stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+</head>
+<body data-theme="dark">
 
-        <link rel="icon" href="img/logo.jpg">
-         <title>Neztech | Your Graphic Solution</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-      <header >
-          <div class="container">
-          <div id="branding">      
-            <h1><span class="highlight">Welcome</span> To Neztech</h1>
-             <p>Your Graphic & Web Solution Hub</p>
-              </div>
-      <button id="btn">Please click here</button>
-                </div>          
-        <nav>
-          <div class="hamburger" id="hamburgerMenu">
-                        <span ></span>
-                        <span ></span>
-                        <span ></span>
-                        <div class="Menu-show">Menu</div>
-                        </div>
-                      <!-- Navigation Menu  -->
-                      <ul class="menu" id="navMenu">                
-              <li><a href="index.html">Home</a></li>         
-              <li><a href="it-services.html">IT services</a></li>
-              <li><a href="graphic design-services.html">Graphic Design</a></li>
-              <li><a href="#contact">Contact</a></li> 
-                </ul>
-            </nav>            
-    </header>
- <section id="showcase">
-    <div>
- <div class="container">
- <h1>
-     <b>Affordable<br> Proffesional<br>Graphic Design and IT Services</b></h1>
-              
-<p> Neztech specialist in IT solutions and Graphic Design services. we aim to transform your ideas 
-         into reality with proffesionalism and creativity,we bring your vision to life.</p>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Nez<span>Tech</span></a>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            </div>            
-          </section>
-   <section id="logo" class="section">
-   <div class="container">
-   <h2>About Me</h2>
-   <p>
-     Hi! I'm Nonde Ezekiel (Neztech), a passionate graphic and web designer. 
-     Specialize in creating clean, modern designs that help businesses and individuals stand out—whether it’s through logos, websites, or social media graphics.
-   </p>
-   <p>
-     With a blend of creativity and technical skill, I aim to design solutions that are not only visually appealing but also user-friendly and impactful. 
-     I'm always learning and improving, you are at the right site, at Neztech we bring your ideas to life.!
-   </p>
         </div>
-   </section>
+    </nav>
 
-    <section class="Section" id="services">
-  <h2>Our Services</h2>
-  <div class="Grid">
-    <div class="card">
-      <h3>Logo Design</h3>
-      <p>Professional and unique branding that makes you stand out.</p>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose"><i class="fas fa-times"></i></button>
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#skills" class="mobile-link">Skills</a>
+        <a href="#portfolio" class="mobile-link">Portfolio</a>
+        <a href="#contact" class="mobile-link">Contact</a>
     </div>
-    <div class="card">
-      <h3>Web Design</h3>
-      <p>Responsive websites tailored for your business or personal brand.</p>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                Available for Projects
+            </div>
+            
+            <h1>
+                Transforming Ideas into <br>
+                <span class="gradient-text typing-text" id="typingText">Digital Solutions</span>
+            </h1>
+            
+            <p class="hero-subtitle">
+                Professional ICT Services, Web Development, Mobile App Development, Graphic Design, 
+                Computer Repair, Networking, and Technical Support tailored for businesses, schools, and individuals.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i> Hire Me
+                </a>
+                <a href="#portfolio" class="btn btn-outline">
+                    <i class="fas fa-folder-open"></i> View My Projects
+                </a>
+            </div>
+    </section>
+
+    <!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="section-header fade-in">
+            <span class="section-label">About Me</span>
+            <h2 class="section-title">Meet <span class="gradient-text">Nonde Ezekiel</span></h2>
+            <p class="section-subtitle">Passionate about creating innovative digital solutions that make a difference.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-image fade-in">
+                <!-- Replace the src attribute with your actual photo URL -->
+                <img src="img/reg.png" alt="Nonde Ezekiel - ICT Professional" class="about-image-main">
+            </div>
+            
+            <div class="about-content fade-in">
+                <h3>ICT Professional & Digital Solutions Expert</h3>
+                <p>
+                    I'm Nonde Ezekiel, the founder of NezTech — a technology company dedicated to delivering 
+                    cutting-edge ICT solutions. With expertise spanning software development, graphic design, 
+                    networking, and technical support, I help businesses, schools, and individuals harness 
+                    the power of technology.
+                </p>
+                <p>
+                    My mission is to transform complex problems into elegant, user-friendly digital solutions. 
+                    Whether you need a custom web application, a mobile app, professional branding, or reliable 
+                    IT infrastructure, I bring creativity, technical precision, and a client-first approach to every project.
+                </p>
+                <p>
+                    I believe in building long-term relationships with clients through transparent communication, 
+                    quality deliverables, and ongoing support that ensures your technology continues to serve your goals.
+                </p>
+            </div>
+        </div>
     </div>
-    <div class="card">
-      <h3>Social Media Kits</h3>
-      <p>Eye-catching templates to elevate your online presence.</p>
-    </div>
-  </div>
-  <div class="Grid">
-    <div class="card">
-      <h3>Computer Repairs</h3>
-      <p>We fix both hardware and software issues to keep your systems running smoothly.</p>
-    </div>
-    <div class="card">
-      <h3>Network Setup</h3>
-      <p>Reliable LAN/Wi-Fi setup for homes, offices, and institutions.</p>
-    </div>
-    <div class="card">
-      <h3>Software Installation</h3>
-      <p>Get essential software installed, updated, and secured professionally.</p>
-    </div>
-    <div class="card">
-      <h3>IT Consultation</h3>
-      <p>Need advice or a solution? We provide personalized IT consulting services.</p>
-    </div>
-  </div>
-</div>
 </section>
+               
+    <!-- Services Section -->
+    <section id="services" style="background: linear-gradient(180deg, transparent, rgba(14,165,233,0.03), transparent);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Services</span>
+                <h2 class="section-title">What I <span class="gradient-text">Offer</span></h2>
+                <p class="section-subtitle">Comprehensive digital solutions tailored to your needs</p>
+            </div>
 
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Website Development</h3>
+                    <p>Custom responsive websites built with modern technologies. From landing pages to complex web applications.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Android App Development</h3>
+                    <p>Native and cross-platform mobile applications designed for performance and user engagement.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Graphic Design</h3>
+                    <p>Professional branding, logos, marketing materials, and visual identity that makes your business stand out.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Intuitive and beautiful user interfaces that enhance user experience and drive engagement.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-laptop-medical"></i></div>
+                    <h3>Laptop & Desktop Repair</h3>
+                    <p>Expert hardware and software diagnostics, repairs, and maintenance for all computer brands.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fab fa-windows"></i></div>
+                    <h3>Windows Installation & Upgrades</h3>
+                    <p>Professional OS installation, system optimization, and software configuration services.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Networking & Internet Setup</h3>
+                    <p>Reliable network infrastructure design, installation, and troubleshooting for homes and offices.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database Development</h3>
+                    <p>Robust database design, optimization, and management solutions for your applications.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-comments"></i></div>
+                    <h3>ICT Consultation</h3>
+                    <p>Strategic technology consulting to help you make informed decisions and digital transformations.</p>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Technical Support</h3>
+                    <p>Reliable ongoing IT support and maintenance to keep your systems running smoothly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <ul class="sites">
-      <li>📸 Instagram: <a href="https://instagram.com/nezte_ch" >@nezte_ch</a><br> </li>
-      <li> ✉️ Email: <a href="mailto:nondeezekiel4@gmail.com">nondeezekiel4@gmail.com</a>
-      </li>
-  </ul>
-   
-  </section>
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <p class="section-subtitle">Technologies and tools I work with daily</p>
+            </div>
 
-        <script>
-// Hamburger Menu Toggle
-const hamburgerMenu = document.getElementById("hamburgerMenu");
-const navMenu = document.getElementById("navMenu");
+            <div class="skills-container">
+                <!-- (skills list unchanged) -->
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-html5"></i> HTML5</span><span class="skill-percent">95%</span></div><div class="skill-bar"><div class="skill-progress" data-width="95"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-css3-alt"></i> CSS3</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-js"></i> JavaScript</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-java"></i> Java</span><span class="skill-percent">80%</span></div><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-php"></i> PHP</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fas fa-database"></i> MySQL</span><span class="skill-percent">88%</span></div><div class="skill-bar"><div class="skill-progress" data-width="88"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fas fa-mobile-alt"></i> Flutter</span><span class="skill-percent">75%</span></div><div class="skill-bar"><div class="skill-progress" data-width="75"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-android"></i> Android Studio</span><span class="skill-percent">82%</span></div><div class="skill-bar"><div class="skill-progress" data-width="82"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-wordpress"></i> WordPress</span><span class="skill-percent">90%</span></div><div class="skill-bar"><div class="skill-progress" data-width="90"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fab fa-github"></i> Git & GitHub</span><span class="skill-percent">85%</span></div><div class="skill-bar"><div class="skill-progress" data-width="85"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fas fa-image"></i> Adobe Photoshop</span><span class="skill-percent">88%</span></div><div class="skill-bar"><div class="skill-progress" data-width="88"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fas fa-pen-nib"></i> Canva</span><span class="skill-percent">92%</span></div><div class="skill-bar"><div class="skill-progress" data-width="92"></div></div></div>
+                <div class="skill-item fade-in"><div class="skill-header"><span class="skill-name"><i class="fas fa-network-wired"></i> Networking</span><span class="skill-percent">80%</span></div><div class="skill-bar"><div class="skill-progress" data-width="80"></div></div></div>
+            </div>
+        </div>
+    </section>
 
-hamburgerMenu.addEventListener("click", () => {
-navMenu.classList.toggle("show");
-});
-</script>
+    <!-- Why Choose Section -->
+    <section id="why" style="background: linear-gradient(180deg, transparent, rgba(6,182,212,0.03), transparent);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Why NezTech</span>
+                <h2 class="section-title">Why Choose <span class="gradient-text">NezTech</span></h2>
+                <p class="section-subtitle">What sets my services apart from the rest</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-gem"></i></div><div class="why-content"><h3>High-Quality Work</h3><p>Every project is crafted with attention to detail, following industry best practices and modern standards.</p></div></div>
+                <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-tags"></i></div><div class="why-content"><h3>Affordable Pricing</h3><p>Competitive rates without compromising quality. Transparent pricing with no hidden costs.</p></div></div>
+                <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-bolt"></i></div><div class="why-content"><h3>Fast Delivery</h3><p>Efficient project management ensures timely delivery while maintaining the highest quality standards.</p></div></div>
+                <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-shield-alt"></i></div><div class="why-content"><h3>Secure Solutions</h3><p>Security-first approach with best practices in data protection, encryption, and secure coding.</p></div></div>
+                <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-hands-helping"></i></div><div class="why-content"><h3>Ongoing Support</h3><p>Dedicated post-project support and maintenance to ensure your solutions continue to perform optimally.</p></div></div>
+                <div class="why-card fade-in"><div class="why-icon"><i class="fas fa-rocket"></i></div><div class="why-content"><h3>Modern Technologies</h3><p>Up-to-date with the latest frameworks, tools, and technologies to future-proof your solutions.</p></div></div>
+            </div>
+        </div>
+    </section>
 
-<script>
-  document.getElementById("btn").addEventListener("click", function () {
-      alert("Hello from Neztech! ,Im glady to have you here hope to work with you.");
-  });
-  </script>
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">A selection of my recent work across different domains</p>
+            </div>
 
-   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    (function() {
-      emailjs.init("v9r4QJoJ6LhgOae5A");
-    })();
+            <div class="portfolio-filter fade-in">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="system">Systems</button>
+            </div>
 
-    window.onload = function() {
-      const params = {
-        message: "Someone has accessed your website.",
-        user_agent: navigator.userAgent,
-        time: new Date().toLocaleString()
-      };
+            <div class="portfolio-grid">
 
-      emailjs.send("service_vvqbzhd", "template_id482ze", params)
-        .then(function(response) {
-          console.log("✅ Email sent:", response.status);
-        }, function(error) {
-          console.error("❌ Email failed:", error);
-        });
-    };
-  </script>
+                <div class="portfolio-item fade-in" data-category="mobile">
+                    <img src="img/attend.png" alt="Class Attendance System" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Mobile App</span>
+                        <h3 class="portfolio-title">Class Attendance App</h3>
+                        <p class="portfolio-desc">Automated attendance tracking with QR code scanning, reports, and real-time analytics for schools.</p>
+                        <a href="#" class="portfolio-btn" onclick="showProject('attendance')">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="mobile">
+                    <img src="img/techhub.png" alt="Tech Hub" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Mobile App</span>
+                        <h3 class="portfolio-title">Tech Hub</h3>
+                        <p class="portfolio-desc">A platform designed to bring technology, learning, services, and opportunities together in one place. .</p>
+                        <a href="#" class="portfolio-btn" onclick="showProject('techhub')">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="system">
+                    <img src="img/manasyst.png" alt="School Management System" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Management System</span>
+                        <h3 class="portfolio-title">School Management System</h3>
+                        <p class="portfolio-desc">Comprehensive ERP solution for student records, grades, fees, and staff management.</p>
+                        <a href="#" class="portfolio-btn" onclick="showProject('school')">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="web">
+                    <img src="img/ecom.png" alt="E-commerce Website" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">E-Commerce</span>
+                        <h3 class="portfolio-title">E-commerce Website</h3>
+                        <p class="portfolio-desc">Full-featured online store with payment integration, inventory management, and admin dashboard.</p>
+                        <a href="#" class="portfolio-btn" onclick="showProject('ecommerce')">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="web">
+                    <img src="img/port.png" alt="Portfolio Website" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Web Design</span>
+                        <h3 class="portfolio-title">Portfolio Website</h3>
+                        <p class="portfolio-desc">Modern responsive portfolio websites for professionals and businesses to showcase their work.</p>
+                        <a href="#" class="portfolio-btn" onclick="showProject('portfolio')">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in" data-category="design">
+                    <img src="img/graphics.png" alt="Graphic Design Collection" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <span class="portfolio-category">Graphic Design</span>
+                        <h3 class="portfolio-title">Graphic Design Collection</h3>
+                        <p class="portfolio-desc">Professional branding packages, logos, social media graphics, and marketing materials.</p>
+                        <a href="#" class="portfolio-btn" onclick="showProject('design')">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in"><div class="stat-number" data-target="50">0</div><div class="stat-label">Projects Completed</div></div>
+                <div class="stat-item fade-in"><div class="stat-number" data-target="30">0</div><div class="stat-label">Happy Clients</div></div>
+                <div class="stat-item fade-in"><div class="stat-number" data-target="5">0</div><div class="stat-label">Years of Experience</div></div>
+                <div class="stat-item fade-in"><div class="stat-number" data-target="15">0</div><div class="stat-label">Technologies Used</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">Client <span class="gradient-text">Reviews</span></h2>
+                <p class="section-subtitle">What my clients say about working with me</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">Nonde delivered an exceptional school management system that transformed how we handle student records. His attention to detail and technical expertise are remarkable. Highly recommended!</p>
+                    <div class="testimonial-author"><div class="testimonial-avatar">JM</div><div class="testimonial-info"><h4>James Mwamba</h4><span>School Administrator</span><div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">The e-commerce website NezTech built for my business increased my online sales by 200%. Professional, responsive, and always available for support. Truly a game-changer for my business.</p>
+                    <div class="testimonial-author"><div class="testimonial-avatar">SN</div><div class="testimonial-info"><h4>Sarah Ngoma</h4><span>Business Owner</span><div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="testimonial-quote">"</div>
+                    <p class="testimonial-text">From networking setup to ongoing IT support, NezTech has been our trusted technology partner. Reliable, knowledgeable, and delivers solutions that actually work for our organization.</p>
+                    <div class="testimonial-author"><div class="testimonial-avatar">DK</div><div class="testimonial-info"><h4>Dr. Kabwe</h4><span>Medical Director</span><div class="testimonial-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: linear-gradient(180deg, transparent, rgba(14,165,233,0.03), transparent);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <p class="section-subtitle">Have a project in mind? Let's discuss how I can help</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm currently available for freelance projects and full-time opportunities. Whether you need a website, mobile app, or IT consultation, I'd love to hear from you.</p>
+                    
+                    <a href="https://wa.me/260973777945" target="_blank" class="contact-item"><div class="contact-icon"><i class="fab fa-whatsapp"></i></div><div class="contact-details"><h4>WhatsApp</h4><p>0973 777 945</p></div></a>
+                    <a href="tel:+260767161095" class="contact-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-details"><h4>Phone</h4><p>0767 161 095</p></div></a>
+                    <a href="mailto:nondeezekiel4@gmail.com" class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h4>Email</h4><p>nondeezekiel4@gmail.com</p></div></a>
+                    <a href="https://facebook.com/nonde.ezekiel" target="_blank" class="contact-item"><div class="contact-icon"><i class="fab fa-facebook-f"></i></div><div class="contact-details"><h4>Facebook</h4><p>Nonde Ezekiel</p></div></a>
+                    <a href="https://instagram.com/nezt_ch" target="_blank" class="contact-item"><div class="contact-icon"><i class="fab fa-instagram"></i></div><div class="contact-details"><h4>Instagram</h4><p>@nezt_ch</p></div></a>
+                    <a href="https://github.com/nondeezekiel" target="_blank" class="contact-item"><div class="contact-icon"><i class="fab fa-github"></i></div><div class="contact-details"><h4>GitHub</h4><p>View My Code</p></div></a>
+
+                    <div class="map-container"><div style="text-align:center;"><i class="fas fa-map-marker-alt" style="font-size:2rem;color:var(--primary);margin-bottom:0.5rem;display:block;"></i><span>Lusaka, Zambia</span></div></div>
+                </div>
+
+                <div class="contact-form fade-in">
+                    <div class="form-success" id="formSuccess"><i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.</div>
+                    <form id="contactForm" novalidate>
+                        <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" placeholder="Your full name"><span class="form-error">Please enter your name</span></div>
+                        <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com"><span class="form-error">Please enter a valid email</span></div>
+                        <div class="form-group"><label for="phone">Phone Number</label><input type="tel" id="phone" name="phone" placeholder="+260 XXX XXX XXX"><span class="form-error">Please enter your phone number</span></div>
+                        <div class="form-group"><label for="subject">Subject</label><select id="subject" name="subject"><option value="">Select a service...</option><option value="web">Website Development</option><option value="app">Android App Development</option><option value="design">Graphic Design</option><option value="repair">Computer Repair</option><option value="network">Networking</option><option value="consult">ICT Consultation</option><option value="other">Other</option></select><span class="form-error">Please select a subject</span></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell me about your project..."></textarea><span class="form-error">Please enter your message (min 10 characters)</span></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer>
-      <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-     <p class="footer">&copy; 2024 Neztech. All rights reserved.</p>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">Nez<span>Tech</span></a>
+                <p>Transforming ideas into digital reality. Professional ICT solutions for businesses, schools, and individuals in Zambia and beyond.</p>
+                <div class="footer-social">
+                    <a href="https://facebook.com/nonde.ezekiel" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com/nezt_ch" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/nondeezekiel" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/260973777945" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column"><h4>Quick Links</h4><ul class="footer-links"><li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li><li><a href="#about"><i class="fas fa-chevron-right"></i> About</a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li><li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portfolio</a></li><li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li></ul></div>
+            <div class="footer-column"><h4>Services</h4><ul class="footer-links"><li><a href="#services"><i class="fas fa-chevron-right"></i> Web Development</a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> App Development</a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> Graphic Design</a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> Networking</a></li><li><a href="#services"><i class="fas fa-chevron-right"></i> IT Support</a></li></ul></div>
+            <div class="footer-column"><h4>Contact</h4><ul class="footer-links"><li><a href="tel:+260767161095"><i class="fas fa-phone"></i> 0767 161 095</a></li><li><a href="mailto:nondeezekiel4@gmail.com"><i class="fas fa-envelope"></i> nondeezekiel4@gmail.com</a></li><li><a href="#"><i class="fas fa-map-marker-alt"></i> Lusaka, Zambia</a></li></ul></div>
+        </div>
+        <div class="footer-bottom"><p> © NezTech. All rights reserved.</p></div>
     </footer>
+
+   
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <img src="" alt="Project preview" id="lightboxImg">
+    </div>
+
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            setTimeout(() => document.getElementById('preloader').classList.add('hidden'), 500);
+        });
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById('progressBar').style.width = (scrollTop / scrollHeight) * 100 + '%';
+        });
+
+        // Sticky Nav
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', () => mobileMenu.classList.remove('active')));
+        mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.add('active'));
+        mobileMenuClose.addEventListener('click', () => mobileMenu.classList.remove('active'));
+
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+        const savedTheme = localStorage.getItem('neztech-theme');
+        if (savedTheme === 'light') { body.setAttribute('data-theme', 'light'); icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+        themeToggle.addEventListener('click', () => {
+            const current = body.getAttribute('data-theme');
+            if (current === 'light') { body.setAttribute('data-theme', 'dark'); localStorage.setItem('neztech-theme', 'dark'); icon.classList.remove('fa-moon'); icon.classList.add('fa-sun'); }
+            else { body.setAttribute('data-theme', 'light'); localStorage.setItem('neztech-theme', 'light'); icon.classList.remove('fa-sun'); icon.classList.add('fa-moon'); }
+        });
+
+        // Typing Effect
+        const typingText = document.getElementById('typingText');
+        const words = ['Digital Solutions', 'Web Applications', 'Mobile Apps', 'ICT Services', 'Your Vision'];
+        let wordIndex = 0, charIndex = 0, isDeleting = false;
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) { typingText.textContent = currentWord.substring(0, charIndex - 1); charIndex--; }
+            else { typingText.textContent = currentWord.substring(0, charIndex + 1); charIndex++; }
+            let typeSpeed = isDeleting ? 50 : 100;
+            if (!isDeleting && charIndex === currentWord.length) { typeSpeed = 2000; isDeleting = true; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; wordIndex = (wordIndex + 1) % words.length; typeSpeed = 500; }
+            setTimeout(typeEffect, typeSpeed);
+        }
+        typeEffect();
+
+        // Intersection Observer for fade-in and skill bars / counters
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.querySelectorAll('.skill-progress').forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        setTimeout(() => bar.style.width = width + '%', 200);
+                    });
+                    entry.target.querySelectorAll('[data-count], [data-target]').forEach(counter => {
+                        const target = parseInt(counter.getAttribute('data-count') || counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const increment = target / (duration / 16);
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) { counter.textContent = Math.floor(current) + (target > 100 ? '+' : ''); requestAnimationFrame(updateCounter); }
+                            else { counter.textContent = target + (target > 100 ? '+' : ''); }
+                        };
+                        updateCounter();
+                    });
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Portfolio Filter
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                document.querySelectorAll('.portfolio-item').forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.classList.remove('hidden');
+                        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => item.classList.add('hidden'), 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        document.querySelectorAll('.portfolio-image').forEach(img => {
+            img.addEventListener('click', () => { lightboxImg.src = img.src; lightbox.classList.add('active'); });
+        });
+        document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
+
+   
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+            ['name', 'email', 'phone', 'subject', 'message'].forEach(id => {
+                const el = document.getElementById(id);
+                const group = el.parentElement;
+                group.classList.remove('error');
+                if (id === 'name' && el.value.trim().length < 2) { group.classList.add('error'); isValid = false; }
+                if (id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())) { group.classList.add('error'); isValid = false; }
+                if (id === 'phone' && el.value.trim().length < 8) { group.classList.add('error'); isValid = false; }
+                if (id === 'subject' && !el.value) { group.classList.add('error'); isValid = false; }
+                if (id === 'message' && el.value.trim().length < 10) { group.classList.add('error'); isValid = false; }
+            });
+            if (isValid) {
+                document.getElementById('formSuccess').style.display = 'block';
+                document.getElementById('contactForm').reset();
+                setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 5000);
+            }
+        });
+
+        // Project details
+        function showProject(project) {
+            const projects = {
+                attendance: 'Class Attendance App - A comprehensive QR-based attendance tracking system with real-time reporting, student management, and analytics dashboard. Built with Xml, SQLite, and Java.',
+                techhub: 'Tech Hub - A platform designed to bring technology, learning, services, and opportunities together in one place. Wheter you are a student, developer, entrepreneur, freelancer, or tech enthusiast, the app helps you learn new skills, discover tech resources, connect with others, and access useful digital services.',
+                school: 'School Management System - Full ERP solution with modules for admissions, academics, examinations, fees, library, and staff management. Built with modern web technologies.',
+                ecommerce: 'E-commerce Website - Feature-rich online shopping platform with product catalog, shopping cart, payment integration, order tracking, and comprehensive admin panel.',
+                portfolio: 'Portfolio Website - Modern responsive portfolio sites built with HTML5, CSS3, and JavaScript featuring smooth animations and optimal performance.',
+                design: 'Graphic Design Collection - Professional branding packages including logo design, business cards, social media kits, and marketing collateral created with Adobe Photoshop and Illustrator.'
+            };
+            alert(projects[project] || 'Project details coming soon!');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 200) current = section.getAttribute('id');
+            });
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+            });
+        });
+    </script>
 </body>
 </html>
