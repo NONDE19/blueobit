@@ -912,108 +912,150 @@
                font-size: 0.875rem;
              }
 
-       /* Contact Section  */
-.contact-grid { 
-    display: grid; 
+         
+/* CONTACT SECTION */
+
+/* Layout Grid */
+.contact-grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem; 
+    gap: 4rem;
     align-items: start;
 }
 
+/* CONTACT INFO (LEFT COLUMN) */
+
 .contact-info h3 {
-    font-size: 2rem; 
-    margin-bottom: 1rem; 
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .contact-info > p {
     color: var(--light-gray);
-    margin-bottom: 2rem; 
-    line-height: 1.7; 
+    margin-bottom: 2rem;
+    line-height: 1.7;
 }
 
-.contact-item { 
+/* Contact item cards */
+.contact-item {
     display: flex;
-    align-items: center; 
+    align-items: center;
     gap: 1rem;
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
     padding: 1.2rem;
     background: var(--glass);
-    border: 1px solid var(--glass-border); 
+    border: 1px solid var(--glass-border);
     border-radius: 16px;
-    transition: var(--transition); 
-    text-decoration: none; 
+    transition: var(--transition);
+    text-decoration: none;
     color: inherit;
 }
 
-.contact-item:hover { 
-    transform: translateX(10px); 
-    border-color: var(--primary); 
+.contact-item:hover {
+    transform: translateX(10px);
+    border-color: var(--primary);
 }
 
-.contact-icon { 
-    width: 50px; 
-    height: 50px; 
-    background: linear-gradient(135deg, var(--primary), var(--cyan)); 
-    border-radius: 12px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: white; 
-    font-size: 1.2rem; 
+.contact-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary), var(--cyan));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
     flex-shrink: 0;
 }
 
-.contact-details h4 { 
-    font-size: 0.9rem; 
-    color: var(--light-gray); 
-    margin-bottom: 0.25rem; 
+.contact-details h4 {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    margin-bottom: 0.25rem;
 }
 
-.contact-details p { 
-    font-weight: 600; 
-    font-size: 0.95rem; 
+.contact-details p {
+    font-weight: 600;
+    font-size: 0.95rem;
 }
 
-/* Contact Form  */
-.contact-form { 
-    background: var(--glass); 
-    border: 1px solid var(--glass-border); 
-    border-radius: 24px; 
-    padding: 2.5rem; 
+/* Map container */
+.map-container {
+    margin-top: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    height: 200px;
+    background: var(--glass);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-gray);
+}
+
+/* CONTACT FORM (RIGHT COLUMN) */
+
+.contact-form {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
     backdrop-filter: blur(20px);
 }
 
-.form-group { 
-    margin-bottom: 1.5rem; 
+/* Form Groups  */
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-.form-group label { 
-    display: block; 
-    margin-bottom: 0.5rem; 
-    font-size: 0.9rem; 
-    font-weight: 500; 
-    color: var(--light-gray); 
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--light-gray);
 }
 
-/* Input, Textarea, and Select - Fixed */
+/* Inputs, Textareas, Selects  */
 .form-group input,
 .form-group textarea,
-.form-group select { 
-    width: 100%; 
-    padding: 1rem 1.25rem; 
-    background: rgba(255, 255, 255, 0.05); 
-    border: 1px solid var(--glass-border); 
-    border-radius: 12px; 
-    color: var(--white); 
-    font-family: 'Inter', sans-serif; 
-    font-size: 0.95rem; 
+.form-group select {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
     transition: var(--transition);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
 
-/* Select dropdown - Fixed for readability */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--light-gray);
+    opacity: 0.7;
+}
+
+.form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/*  Select Dropdown Styling  */
 .form-group select {
     background-color: var(--darker);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2394a3b8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
@@ -1024,14 +1066,13 @@
     color: var(--white);
 }
 
-/* Select options - Light background for readability */
 .form-group select option {
     background-color: var(--darker);
     color: var(--white);
     padding: 0.75rem;
 }
 
-/* For dark mode - select background */
+/* Dark theme select */
 [data-theme="dark"] .form-group select {
     background-color: #1a1a2e;
     color: #f8fafc;
@@ -1042,7 +1083,7 @@
     color: #f8fafc;
 }
 
-/* For light mode - select background */
+/* Light theme select */
 [data-theme="light"] .form-group select {
     background-color: #ffffff;
     color: #0f172a;
@@ -1054,70 +1095,67 @@
     color: #0f172a;
 }
 
-/* Input and textarea focus states */
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus { 
-    outline: none; 
-    border-color: var(--primary); 
-    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
-    background: rgba(255, 255, 255, 0.08);
+/* FORM STATES — ERROR, SUCCESS, LOADING */
+
+/* Inline field error message */
+.form-error {
+    color: #ef4444;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
 }
 
-/* Placeholder color */
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-    color: var(--light-gray);
-    opacity: 0.7;
-}
-
-.form-group textarea { 
-    min-height: 140px; 
-    resize: vertical; 
-}
-
-/* Form error states */
-.form-error { 
-    color: #ef4444; 
-    font-size: 0.8rem; 
-    margin-top: 0.5rem; 
-    display: none; 
-}
-
-.form-group.error .form-error { 
-    display: block; 
+.form-group.error .form-error {
+    display: block;
 }
 
 .form-group.error input,
 .form-group.error textarea,
-.form-group.error select { 
-    border-color: #ef4444; 
+.form-group.error select {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
-.form-success { 
-    background: rgba(34, 197, 94, 0.1); 
-    border: 1px solid rgba(34, 197, 94, 0.3); 
-    color: #22c55e; 
-    padding: 1rem; 
-    border-radius: 12px; 
-    margin-bottom: 1rem; 
-    display: none; 
+/* Success message */
+.form-success {
+    display: none;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    color: #22c55e;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
 }
 
-.map-container { 
-    margin-top: 2rem; 
-    border-radius: 16px; 
-    overflow: hidden; 
-    border: 1px solid var(--glass-border); 
-    height: 200px; 
-    background: var(--glass); 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    color: var(--light-gray); 
+/* Error banner */
+.form-error-banner {
+    display: none;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    font-size: 0.9rem;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-/* Responsive adjustments */
+.form-error-banner i {
+    font-size: 1.1rem;
+}
+
+/* Disabled submit button */
+.btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/*  RESPONSIVE */
+   
+
 @media (max-width: 1024px) {
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1129,7 +1167,7 @@
     .contact-form {
         padding: 1.5rem;
     }
-    
+
     .contact-item {
         padding: 1rem;
     }
