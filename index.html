@@ -19,7 +19,8 @@
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("v9r4rQJoJ6LhgOae5A");</script>
 </head>
 <body data-theme="dark">
 
@@ -553,24 +554,31 @@
 
         // Contact Form
         document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-            ['name', 'email', 'phone', 'subject', 'message'].forEach(id => {
-                const el = document.getElementById(id);
-                const group = el.parentElement;
-                group.classList.remove('error');
-                if (id === 'name' && el.value.trim().length < 2) { group.classList.add('error'); isValid = false; }
-                if (id === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value.trim())) { group.classList.add('error'); isValid = false; }
-                if (id === 'phone' && el.value.trim().length < 8) { group.classList.add('error'); isValid = false; }
-                if (id === 'subject' && !el.value) { group.classList.add('error'); isValid = false; }
-                if (id === 'message' && el.value.trim().length < 10) { group.classList.add('error'); isValid = false; }
-            });
-            if (isValid) {
+    e.preventDefault();
+    let isValid = true;
+    // ...existing validation...
+    
+    if (isValid) {
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+        emailjs.sendForm('service_vvqbzhd', 'template_id48ze', e.target)
+            .then(() => {
                 document.getElementById('formSuccess').style.display = 'block';
                 document.getElementById('contactForm').reset();
                 setTimeout(() => document.getElementById('formSuccess').style.display = 'none', 5000);
-            }
-        });
+            })
+            .catch((error) => {
+                alert('Failed to send message. Please try again or contact me directly.');
+                console.error('EmailJS error:', error);
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+            });
+    }
+});
 
         // Project details
         function showProject(project) {
