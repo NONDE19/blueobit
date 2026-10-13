@@ -25,11 +25,6 @@
 </head>
 <body data-theme="dark">
 
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="loader"></div>
-    </div>
-
     <!-- Scroll Progress -->
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
@@ -108,41 +103,40 @@
     </section>
 
     <!-- About Section -->
-<section id="about">
-    <div class="container">
-        <div class="section-header fade-in">
-            <span class="section-label">About Me</span>
-            <h2 class="section-title">Meet <span class="gradient-text">Nonde Ezekiel</span></h2>
-            <p class="section-subtitle">Passionate about creating innovative digital solutions that make a difference.</p>
-        </div>
+    <section id="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Meet <span class="gradient-text">Nonde Ezekiel</span></h2>
+                <p class="section-subtitle">Passionate about creating innovative digital solutions that make a difference.</p>
+            </div>
 
-        <div class="about-grid">
-            <div class="about-image fade-in">
-                <!-- Replace the src attribute with your actual photo URL -->
-                <img src="img/reg.png" alt="Nonde Ezekiel - ICT Professional" class="about-image-main">
-            </div>
-            
-            <div class="about-content fade-in">
-                <h3>ICT Professional & Digital Solutions Expert</h3>
-                <p>
-                    I'm Nonde Ezekiel, the founder of NezTech — a technology company dedicated to delivering 
-                    cutting-edge ICT solutions. With expertise spanning software development, graphic design, 
-                    networking, and technical support, I help businesses, schools, and individuals harness 
-                    the power of technology.
-                </p>
-                <p>
-                    My mission is to transform complex problems into elegant, user-friendly digital solutions. 
-                    Whether you need a custom web application, a mobile app, professional branding, or reliable 
-                    IT infrastructure, I bring creativity, technical precision, and a client-first approach to every project.
-                </p>
-                <p>
-                    I believe in building long-term relationships with clients through transparent communication, 
-                    quality deliverables, and ongoing support that ensures your technology continues to serve your goals.
-                </p>
+            <div class="about-grid">
+                <div class="about-image fade-in">
+                    <img src="img/reg.png" alt="Nonde Ezekiel - ICT Professional" class="about-image-main">
+                </div>
+                
+                <div class="about-content fade-in">
+                    <h3>ICT Professional & Digital Solutions Expert</h3>
+                    <p>
+                        I'm Nonde Ezekiel, the founder of NezTech — a technology company dedicated to delivering 
+                        cutting-edge ICT solutions. With expertise spanning software development, graphic design, 
+                        networking, and technical support, I help businesses, schools, and individuals harness 
+                        the power of technology.
+                    </p>
+                    <p>
+                        My mission is to transform complex problems into elegant, user-friendly digital solutions. 
+                        Whether you need a custom web application, a mobile app, professional branding, or reliable 
+                        IT infrastructure, I bring creativity, technical precision, and a client-first approach to every project.
+                    </p>
+                    <p>
+                        I believe in building long-term relationships with clients through transparent communication, 
+                        quality deliverables, and ongoing support that ensures your technology continues to serve your goals.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
                
     <!-- Services Section -->
     <section id="services" style="background: linear-gradient(180deg, transparent, rgba(14,165,233,0.03), transparent);">
@@ -443,20 +437,15 @@
     </div>
 
     <script>
-        /* EMAILJS CONFIGURATION */        
-        const EMAILJS_PUBLIC_KEY  = 'v9r4QJoJ6LhgOae5A';     
-        const EMAILJS_SERVICE_ID  = 'service_vvqbzhd';      
-        const EMAILJS_TEMPLATE_ID = 'template_id482ze';    
+        /* EMAILJS CONFIGURATION */
+        const EMAILJS_PUBLIC_KEY  = 'v9r4QJoJ6LhgOae5A';
+        const EMAILJS_SERVICE_ID  = 'service_vvqbzhd';
+        const EMAILJS_TEMPLATE_ID = 'template_id482ze';
 
         // Initialize EmailJS once
         if (typeof emailjs !== 'undefined') {
-            emailjs.init(v9r4QJoJ6LhgOae5A);
+            emailjs.init(EMAILJS_PUBLIC_KEY);
         }
-
-        // Preloader
-        window.addEventListener('load', () => {
-            setTimeout(() => document.getElementById('preloader').classList.add('hidden'), 500);
-        });
 
         // Scroll Progress
         window.addEventListener('scroll', () => {
@@ -559,14 +548,13 @@
         document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('active'));
         lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.classList.remove('active'); });
 
-        /*  CONTACT FORM VALIDATION + EMAILJS SUBMIT */
+        /* CONTACT FORM VALIDATION + EMAILJS SUBMIT */
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const formSuccess = document.getElementById('formSuccess');
         const formErrorBanner = document.getElementById('formErrorBanner');
         const formErrorText = document.getElementById('formErrorText');
 
-        // Validation rules
         const validators = {
             name: (v) => v.trim().length >= 2,
             email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()),
@@ -578,7 +566,6 @@
             message: (v) => v.trim().length >= 10
         };
 
-        // Validate a single field
         function validateField(id) {
             const el = document.getElementById(id);
             const group = el.parentElement;
@@ -587,7 +574,6 @@
             return isValid;
         }
 
-        // Real-time validation
         ['name', 'email', 'phone', 'subject', 'message'].forEach(id => {
             const el = document.getElementById(id);
             el.addEventListener('blur', () => validateField(id));
@@ -599,7 +585,6 @@
             });
         });
 
-        // Full form validation
         function validateForm() {
             let isValid = true;
             Object.keys(validators).forEach(id => {
@@ -608,20 +593,17 @@
             return isValid;
         }
 
-        // Reset button state
         function resetSubmitButton() {
             submitBtn.disabled = false;
             submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
         }
 
-        // Show error banner
         function showErrorBanner(message) {
             formErrorText.textContent = message;
             formErrorBanner.style.display = 'flex';
             setTimeout(() => { formErrorBanner.style.display = 'none'; }, 6000);
         }
 
-        // Form submit
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             formSuccess.style.display = 'none';
